@@ -1,0 +1,127 @@
+main {
+    min-width: 48rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+
+    & header.calendar {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .calendar-legend {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 0.25rem;
+
+            & h1 {
+                font: var(--title);
+                color: var(--content-primary);
+            }
+            & span {
+                font: var(--paragraph-md);
+                color: var(--content-secondary);
+            }
+        }
+
+        & input[type="date"] {
+            padding: 0.75rem;
+            border: var(--border-primary) 1px solid;
+            border-radius: 0.5rem;
+            font: 500 1rem/150% var(--ff-inter);
+            color: var(--content-secondary);
+        }
+    }
+
+    & div.periods {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        & section.period {
+            background: var(--bg-tertiary);
+            border-radius: 0.625rem;
+
+            & header {
+                padding: 0.75rem 1.25rem;
+                border-bottom: solid 1px var(--border-divisor);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 0.75rem;
+
+                & h2 {
+                    font: var(--label-lg);
+                    color: var(--content-primary);
+                    margin-right: auto;
+                }
+                & span.period-time {
+                    font: var(--label-lg);
+                    color: var(--content-secondary);
+                }
+                & img {
+                    width: 1.25rem;
+                    height: 1.25rem;
+                }
+            }
+
+            & ul {
+                padding: 1.25rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+
+                & li {
+                    display: grid;
+                    grid-template-columns: 0.5fr 2fr 2fr auto;
+                    gap: 1rem;
+                    align-items: center;
+
+                    & span.item-time {
+                        font: var(--label-sm);
+                        color: var(--content-primary);
+                    }
+
+                    & span.item-client {
+                        font: var(--paragraph-sm);
+                        color: var(--content-secondary);
+                    }
+
+                    & span.item-service {
+                        font: var(--paragraph-sm);
+                        color: var(--content-secondary);
+                    }
+                }
+                /* 
+				<ul class="period-list">
+                            <li class="period-item">
+                                <span class="item-time" id="time">08:30</span>
+                                <span class="item-client" id="client-pet-name"
+                                    >João da Silva</span
+                                >
+                                <span class="item-service" id="service"
+                                    >Banho e Tosa</span
+                                >
+                                <a href="#" class="item-remove" id="remove"
+                                    >Remover agendamento</a
+                            >
+                        </li>
+                    </ul>
+					 */
+            }
+        }
+    }
+
+    & button {
+        position: absolute;
+        bottom: -15%;
+        right: -25%;
+    }
+}

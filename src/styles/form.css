@@ -1,0 +1,80 @@
+form {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    padding: 2.5rem;
+    background-color: var(--bg-tertiary);
+    max-width: 30rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.75rem;
+
+	z-index: 2;
+
+    & header {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        & h2 {
+            font: var(--title);
+            color: var(--content-primary);
+        }
+        & span {
+            font: var(--paragraph-sm);
+            color: var(--content-secondary);
+        }
+    }
+
+    & .input-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: start;
+
+		#input-wrapper-date.input-wrapper{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 1rem;
+
+			.input-inner{
+				display: flex;
+				flex-direction: column;
+				gap: .25rem;
+				input{
+					width: 100%;
+				}
+			}
+		}
+
+        & .input-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            width: 100%;
+
+            & .input-content {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.75rem;
+                border: var(--border-primary) 1px solid;
+                border-radius: 0.5rem;
+                font: 500 1rem/150% var(--ff-inter);
+                color: var(--content-secondary);
+            }
+
+            & textarea, & input[type="date"], & input[type="time"] {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.75rem;
+                border: var(--border-primary) 1px solid;
+                border-radius: 0.5rem;
+                font: 500 1rem/150% var(--ff-inter);
+                color: var(--content-secondary);
+            }
+        }
+    }
+}

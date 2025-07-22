@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* COLORS */
+    --content-primary: #ffffff;
+    --content-secondary: #98959d;
+    --content-tertiary: #666666;
+    --content-brand: #9282fa;
+
+    --bg-primary: #151515;
+    --bg-secondary: #1e1e1e;
+    --bg-tertiary: #23242c;
+    --bg-brand: #9282fa;
+    --bg-highlight: #bdb4fa;
+
+    --border-primary: #3e3c41;
+    --border-secondary: #86818c;
+    --border-brand: #9282fa;
+    --border-divisor: #353339;
+
+    --accent-blue: #027df0;
+    --accent-blue-light: #16487a;
+    --accent-yellow: #f0dc02;
+    --accent-yellow-light: #756e1b;
+    --accent-orange: #f09102;
+    --accent-orange-light: #75501b;
+
+    /* FONTS */
+    --ff-inter-tight: "Inter Tight", sans-serif;
+    --ff-inter: "Inter", sans-serif;
+
+    --title: 700 1.5rem/130% var(--ff-inter-tight);
+    --paragraph-md: 500 0.875/170% var(--ff-inter);
+    --paragraph-sm: 500 0.75rem/130% var(--ff-inter);
+    --label-lg: 700 0.875rem/150% var(--ff-inter);
+    --label-md: 700 0.75rem/130% var(--ff-inter);
+    --label-sm: 700 0.625rem/130% var(--ff-inter);
+    --link: 500 0.75rem/130% var(--ff-inter);
+}
+
+body {
+    background-color: #14151d;
+    color: var(--content-primary);
+    font-family: var(--ff-inter);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    padding: 5rem;
+}
+.logo-container {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    background-color: #2e2c30;
+    padding: 0.75rem 1.25rem;
+    border-bottom-right-radius: 0.75rem;
+    z-index: 2;
+}
+fieldset {
+    border: none;
+}
+input,
+textarea {
+    all: unset;
+    box-sizing: border-box;
+}
+label {
+    font: var(--label-md);
+    color: var(--content-primary);
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--content-tertiary);
+    font: var(--link);
+}
+
+button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--bg-primary);
+    text-transform: uppercase;
+    background-color: var(--bg-brand);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font: var(--label-lg);
+    box-shadow: 0px 0px 40px rgba(146, 130, 250, 0.3);
+}
+
+.blur-overlay {
+    position: relative;
+    overflow: hidden; /* importante para o ::after não sair do componente */
+}
+
+.blur-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: blur(8px); /* aplica o blur */
+    -webkit-backdrop-filter: blur(8px); /* compatibilidade com Safari */
+
+    z-index: 1;
+    pointer-events: none; /* permite clicar nos elementos abaixo */
+}
+
+.hide{
+    display: none;
+}
