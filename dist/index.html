@@ -11,7 +11,7 @@
         <link
             href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
             rel="stylesheet" />
-    </head>
+    <link rel="icon" href="pet-paw.svg"><script defer src="main.js"></script></head>
     <body>
         <div class="container">
             <div class="logo-container">
@@ -48,7 +48,7 @@
                                     >
                                     <span id="span-pet-name">Rex</span> / <span id="tutor-name">João da Silva</span></span
                                 >
-                                <span class="item-service" id="item-service"
+                                <span class="item-service" id="service"
                                     >Banho e Tosa</span
                                 >
                                 <a href="#" class="item-remove" id="remove"
@@ -60,7 +60,7 @@
                                 <span class="item-client" id="client-pet-name"
                                     >João da Silva</span
                                 >
-                                <span class="item-service" id="item-service""
+                                <span class="item-service" id="service"
                                     >Banho e Tosa</span
                                 >
                                 <a href="#" class="item-remove" id="remove"
@@ -72,7 +72,7 @@
                                 <span class="item-client" id="client-pet-name"
                                     >João da Silva</span
                                 >
-                                <span class="item-service" id="item-service""
+                                <span class="item-service" id="service"
                                     >Banho e Tosa</span
                                 >
                                 <a href="#" class="item-remove" id="remove"
@@ -95,7 +95,7 @@
                                 <span class="item-client" id="client-pet-name"
                                     >João da Silva</span
                                 >
-                                <span class="item-service" id="item-service""
+                                <span class="item-service" id="service"
                                     >Banho e Tosa</span
                                 >
                                 <a href="#" class="item-remove" id="remove"
@@ -118,7 +118,7 @@
                                 <span class="item-client" id="client-pet-name"
                                     >João da Silva</span
                                 >
-                                <span class="item-service" id="item-service""
+                                <span class="item-service" id="service"
                                     >Banho e Tosa</span
                                 >
                                 <a href="#" class="item-remove" id="remove"
@@ -130,7 +130,7 @@
                 </div>
                 <button id="new-schedule">Novo agendamento</button>
             </main>
-            <form class="hide">
+            <form class="">
                 <header>
                     <span class="icon-close" id="close-form"></span>
                     <h2>Agende um atendimento</h2>
@@ -175,7 +175,7 @@
                             <label for="time">Horário</label>
                             <div class="input-content">
                                 <img src="./src/assets/clock.svg" alt="Ícone de relógio">
-                                <input type="time" id="time" name="time" required/>
+                                <input type="time" id="time" name="time" required step="3600"/>
                                 <span class="icon-arrow"></span>
                             </div>
                         </div>

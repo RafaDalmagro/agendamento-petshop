@@ -12,8 +12,6 @@
     },
     "license": "ISC",
     "author": "Rafael Lima Dalmagro",
-    "type": "commonjs",
-    "main": "main.js",
     "scripts": {
         "build": "webpack",
         "dev": "webpack serve",

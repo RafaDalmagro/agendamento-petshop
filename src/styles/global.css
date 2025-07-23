@@ -147,7 +147,7 @@ button {
     -webkit-backdrop-filter: blur(8px); /* compatibilidade com Safari */
 
     z-index: 1;
-    pointer-events: none; /* permite clicar nos elementos abaixo */
+    pointer-events: all;
 }
 
 .hide {

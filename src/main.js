@@ -1,7 +1,7 @@
 "use strict";
 
 // Configuração do Day.js para o idioma português
-import "./lib/dayjs";
+require("../src/lib/dayjs.js");
 
 //CSS
 
@@ -11,7 +11,9 @@ import "./styles/main.css";
 
 // JS
 
-// import "./modules/form/submit.js";
+import "./modules/form/show-form.js";
+import "./modules/form/formaters.js";
+import "./modules/form/submit.js";
 // import "./modules/form/date-change.js";
 // import "./modules/schedules/cancel.js";
 
