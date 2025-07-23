@@ -57,7 +57,7 @@ form.onsubmit = (event) => {
             petName: petName.value,
             serviceDescription: serviceDescription.value,
         };
-        
+
         form.reset();
         hideForm();
     } catch (error) {
@@ -66,3 +66,4 @@ form.onsubmit = (event) => {
         return;
     }
 };
+

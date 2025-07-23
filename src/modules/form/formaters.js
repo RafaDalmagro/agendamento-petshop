@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import { schedulesDay } from "../schedules/load-schedules";
 // COMPONENTS
 
 const selectedDate = document.querySelector("#date");
@@ -10,6 +11,12 @@ const todayHour = dayjs(new Date()).format("HH:mm");
 // Formata os inputs data e time
 personalDate.value = todayDate;
 personalDate.min = todayDate;
+
+personalDate.onchange = () => {
+    console.log("Data alterada para:", personalDate.value);
+    
+    schedulesDay();
+};
 
 selectedTime.value = todayHour;
 selectedTime.min = "09:00";

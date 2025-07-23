@@ -1,5 +1,5 @@
-import { loadSchedules } from "./schedules/load-schedules.js";
+import { schedulesDay } from "./schedules/load-schedules.js";
 
-document.addEventListener("DOMContentLoaded", async () => {
-    await loadSchedules();
+document.addEventListener("DOMContentLoaded", () => {
+    schedulesDay();
 });
