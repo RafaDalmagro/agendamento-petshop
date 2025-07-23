@@ -66,5 +66,3 @@ form.onsubmit = (event) => {
         return;
     }
 };
-
-console.log(fetchSchedulesByDay({ date: scheduleDate.value }));

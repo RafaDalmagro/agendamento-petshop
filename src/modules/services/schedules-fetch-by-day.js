@@ -1,7 +1,17 @@
+import dayjs from "dayjs";
 import { apiConfig } from "../services/api-config.js";
 
 export async function fetchSchedulesByDay({ date }) {
-    const response = await fetch(`${apiConfig.baseURL}/schedules`);
+    try {
+        const response = await fetch(`${apiConfig.baseURL}/schedules`);
+        const data = await response.json();
 
-    console.log(`Fetching schedules for date: ${response}`);
+        const schedulesByDay = data.filter((schedule) =>
+            dayjs(schedule.scheduleDate).isSame(dayjs(date), "day")
+        );
+
+        return schedulesByDay;
+    } catch (error) {
+        console.log(error);
+    }
 }

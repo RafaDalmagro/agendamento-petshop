@@ -1,3 +1,22 @@
 {
-    "schedules": []
+    "schedules": [
+        {
+            "id": 1,
+            "clientName": "João Silva",
+            "clientPhone": "(11) 98765-4321",
+            "petName": "Rex",
+            "serviceDescription": "Banho e Tosa",
+            "scheduleDate": "2025-07-23",
+            "scheduleTime": "10:00"
+        },
+        {
+            "id": 2,
+            "clientName": "Maria Oliveira",
+            "clientPhone": "(21) 99876-5432",
+            "petName": "Fifi",
+            "serviceDescription": "Consulta Veterinária",
+            "scheduleDate": "2025-07-23",
+            "scheduleTime": "14:00"
+        }
+    ]
 }
