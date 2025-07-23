@@ -26,7 +26,11 @@
                             agendados para hoje</span
                         >
                     </div>
-                    <input type="date" id="personal-date" name="personal-date" />
+                    <div class="input-content">
+                        <img src="./src/assets/icons/calendar.svg" alt="Icone de calendário" />
+                        <input type="date" id="personal-date" name="personal-date" />
+                        <span class="icon-arrow"></span>
+                    </div>
                 </header>
                 <div class="periods" id="periods">
                     <section class="period" id="period-morning">
@@ -41,7 +45,8 @@
                             <li class="period-item">
                                 <span class="item-time" id="time">08:30</span>
                                 <span class="item-client" id="client-pet-name"
-                                    >João da Silva</span
+                                    >
+                                    <span id="pet-name">Rex</span> / <span id="client-name">João da Silva</span></span
                                 >
                                 <span class="item-service" id="service"
                                     >Banho e Tosa</span
@@ -159,11 +164,19 @@
                     <div class="input-wrapper" id="input-wrapper-date">
                         <div class="input-inner" id="input-time">
                             <label for="time">Horário</label>
-                            <input type="time" id="time" name="time" required />
+                            <div class="input-content">
+                                <img src="./src/assets/icons/clock.svg" alt="Ícone de relógio">
+                                <input type="time" id="time" name="time" required />
+                                <span class="icon-arrow"></span>
+                            </div>
                         </div>
                         <div class="input-inner" id="input-date">
                             <label for="date">Data</label>
-                            <input type="date" id="date" name="date" required />
+                            <div class="input-content">
+                                <img src="./src/assets/icons/calendar.svg" alt="Ícone de calendário">
+                                <input type="date" id="date" name="date" required />
+                                <span class="icon-arrow"></span>
+                            </div>
                         </div>
                     </div>
                 </div>    

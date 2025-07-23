@@ -34,7 +34,7 @@
     --ff-inter: "Inter", sans-serif;
 
     --title: 700 1.5rem/130% var(--ff-inter-tight);
-    --paragraph-md: 500 0.875/170% var(--ff-inter);
+    --paragraph-md: 500 0.875rem/170% var(--ff-inter);
     --paragraph-sm: 500 0.75rem/130% var(--ff-inter);
     --label-lg: 700 0.875rem/150% var(--ff-inter);
     --label-md: 700 0.75rem/130% var(--ff-inter);
@@ -56,6 +56,12 @@ body {
 .container {
     padding: 5rem;
 }
+@media (width <= 85rem) {
+    .container {
+        padding: 0.75rem 1.25rem;
+        width: 24.375rem;
+    }
+}
 .logo-container {
     position: absolute;
     top: 0rem;
@@ -68,11 +74,20 @@ body {
 fieldset {
     border: none;
 }
+
 input,
 textarea {
     all: unset;
     box-sizing: border-box;
 }
+::-webkit-calendar-picker-indicator {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    opacity: 0;
+}
+
 label {
     font: var(--label-md);
     color: var(--content-primary);
@@ -87,6 +102,12 @@ a {
     text-decoration: none;
     color: var(--content-tertiary);
     font: var(--link);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+        color: var(--content-primary);
+        text-decoration: underline;
+    }
 }
 
 button {
@@ -102,6 +123,11 @@ button {
     padding: 0.75rem 1.5rem;
     font: var(--label-lg);
     box-shadow: 0px 0px 40px rgba(146, 130, 250, 0.3);
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: var(--bg-highlight);
+    }
 }
 
 .blur-overlay {
@@ -124,6 +150,6 @@ button {
     pointer-events: none; /* permite clicar nos elementos abaixo */
 }
 
-.hide{
+.hide {
     display: none;
 }

@@ -29,13 +29,32 @@ main {
                 color: var(--content-secondary);
             }
         }
-
-        & input[type="date"] {
+        .input-content {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
             padding: 0.75rem;
             border: var(--border-primary) 1px solid;
             border-radius: 0.5rem;
             font: 500 1rem/150% var(--ff-inter);
             color: var(--content-secondary);
+
+            & img {
+                width: 1.25rem;
+                height: 1.25rem;
+            }
+            & span.icon-arrow {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 1.25rem;
+                height: 1.25rem;
+                background-image: url("../assets/icons/arro-down-white.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+            }
         }
     }
 
@@ -84,14 +103,25 @@ main {
                     gap: 1rem;
                     align-items: center;
 
+                    &:not(:last-child) {
+                        border-bottom: solid 1px var(--border-divisor);
+                    }
                     & span.item-time {
-                        font: var(--label-sm);
+                        font: var(--label-lg);
                         color: var(--content-primary);
                     }
 
                     & span.item-client {
-                        font: var(--paragraph-sm);
+                        font: var(--label-md);
                         color: var(--content-secondary);
+
+                        & span#pet-name {
+                            font: var(--label-md);
+                            color: var(--content-primary);
+                        }
+                        & span#client-name {
+                            font: var(--paragraph-md);
+                        }
                     }
 
                     & span.item-service {
@@ -99,22 +129,6 @@ main {
                         color: var(--content-secondary);
                     }
                 }
-                /* 
-				<ul class="period-list">
-                            <li class="period-item">
-                                <span class="item-time" id="time">08:30</span>
-                                <span class="item-client" id="client-pet-name"
-                                    >João da Silva</span
-                                >
-                                <span class="item-service" id="service"
-                                    >Banho e Tosa</span
-                                >
-                                <a href="#" class="item-remove" id="remove"
-                                    >Remover agendamento</a
-                            >
-                        </li>
-                    </ul>
-					 */
             }
         }
     }
@@ -123,5 +137,75 @@ main {
         position: absolute;
         bottom: -15%;
         right: -25%;
+    }
+}
+
+@media (width <= 85rem) {
+    main {
+        margin-top: 8rem;
+        min-width: 0;
+        width: 21.875rem;
+        align-items: start;
+
+        & header.calendar {
+            flex-direction: column;
+            align-items: start;
+            gap: 0.75rem;
+
+            & .calendar-legend {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+
+        & div.periods {
+            & section.period {
+                & ul {
+                    gap: 1rem;
+
+                    & li {
+                        display: grid;
+                        padding: 0.75rem;
+                        grid-template-columns: fit-content(100%) 1fr;
+                        grid-template-rows: auto auto auto;
+                        grid-template-areas:
+                            "time client"
+                            "service service"
+                            "remove remove";
+                        column-gap: 0.75rem;
+                        row-gap: 0rem;
+                        align-items: center;
+
+                        & span.item-time {
+                            grid-area: time;
+                        }
+
+                        & span.item-client {
+                            flex: 1;
+                            grid-area: client;
+                            font: var(--paragraph-sm);
+                        }
+
+                        & span.item-service {
+                            grid-area: service;
+                            font: var(--paragraph-sm);
+                        }
+
+                        & a.item-remove {
+                            grid-area: remove;
+                            justify-self: end;
+                            padding-top: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        & button {
+            margin-top: 1rem;
+            position: initial;
+            align-self: center;
+        }
     }
 }
