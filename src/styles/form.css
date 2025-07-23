@@ -1,10 +1,12 @@
 form {
+    border: var(--border-primary) 1px solid;
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 1.75rem;
     padding: 2.5rem;
     background-color: var(--bg-tertiary);
+    /* background-color: whitesmoke; */
     max-width: 30rem;
     top: 50%;
     left: 50%;
@@ -116,5 +118,22 @@ form {
     & button {
         width: fit-content;
         align-self: flex-end;
+    }
+}
+
+@media (width <= 85rem) {
+    form {
+        width: 21.875rem;
+        & .input-fields {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: start;
+
+            #input-wrapper-date.input-wrapper {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
     }
 }
