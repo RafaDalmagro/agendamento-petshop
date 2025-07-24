@@ -42,7 +42,8 @@ export function showSchedules({ schedulesDay }) {
             petName.textContent = formatedPetName;
             itemTime.textContent = schedule.scheduleTime;
             tutorName.textContent = schedule.clientName;
-            itemService.textContent = schedule.service;
+            itemService.textContent = schedule.serviceDescription;
+            
             removeButton.textContent = "Remover agendamento";
 
             // Adiciona os elementos ao item de agendamento
@@ -67,7 +68,7 @@ export function showSchedules({ schedulesDay }) {
                 schedule.scheduleTime >= "19:00" &&
                 schedule.scheduleTime < "21:00"
             ) {
-                listEvening.appendChild(scheduleItem);
+                listNight.appendChild(scheduleItem);
             }
         });
     } catch (error) {

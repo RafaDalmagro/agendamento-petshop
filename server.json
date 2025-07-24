@@ -6,7 +6,7 @@
             "clientPhone": "(11) 98765-4321",
             "petName": "Rex",
             "serviceDescription": "Banho e Tosa",
-            "scheduleDate": "2025-07-23",
+            "scheduleDate": "2025-07-25",
             "scheduleTime": "10:00"
         },
         {
@@ -15,8 +15,8 @@
             "clientPhone": "(21) 99876-5432",
             "petName": "Fifi",
             "serviceDescription": "Consulta Veterinária",
-            "scheduleDate": "2025-07-23",
-            "scheduleTime": "14:00"
+            "scheduleDate": "2025-07-26",
+            "scheduleTime": "20:00"
         }
     ]
 }
