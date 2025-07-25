@@ -19,7 +19,8 @@ export function showSchedules({ schedulesDay }) {
             const removeButton = document.createElement("a");
 
             scheduleItem.classList.add("period-item");
-
+            scheduleItem.setAttribute("data-id", schedule.id);
+            
             itemTime.classList.add("item-time");
             itemTime.setAttribute("id", "item-time");
 

@@ -50,7 +50,7 @@ form.onsubmit = async (event) => {
     event.preventDefault();
 
     try {
-        const id = new Date().getTime();
+        const id = new Date().getTime().toString();
         const clientNameValue = clientName.value.trim();
         const clientPhoneValue = clientPhone.value.replace(/\D/g, "").trim();
         const petNameValue = petName.value.trim();
@@ -65,18 +65,21 @@ form.onsubmit = async (event) => {
             petName: petNameValue,
             serviceDescription: serviceDescriptionValue,
         });
-        const formulario = {
-            id,
-            clientName: clientNameValue,
-            clientPhone: clientPhoneValue,
-            scheduleDate: selectedDate.value,
-            scheduleTime: selectedTime.value,
-            petName: petNameValue,
-            serviceDescription: serviceDescriptionValue,
-        };
-        console.log("Formulário enviado:", formulario);
+        // const formulario = {
+        //     id,
+        //     clientName: clientNameValue,
+        //     clientPhone: clientPhoneValue,
+        //     scheduleDate: selectedDate.value,
+        //     scheduleTime: selectedTime.value,
+        //     petName: petNameValue,
+        //     serviceDescription: serviceDescriptionValue,
+        // };
+
         hideForm();
-        form.reset();
+        clientName.value = "";
+        clientPhone.value = "";
+        petName.value = "";
+        serviceDescription.value = "";
         await schedulesDay();
     } catch (error) {
         alert("Erro ao agendar o atendimento. Tente novamente.");
