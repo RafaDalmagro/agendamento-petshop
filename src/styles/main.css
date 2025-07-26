@@ -107,7 +107,7 @@ main {
                         border-bottom: solid 1px var(--border-divisor);
                     }
                     & span.item-time {
-                        font: var(--label-lg);
+                        font: var(--label-md);
                         color: var(--content-primary);
                     }
 
@@ -120,13 +120,17 @@ main {
                             color: var(--content-primary);
                         }
                         & span#tutor-name {
-                            font: var(--paragraph-md);
+                            font: var(--paragraph-sm);
                         }
                     }
 
                     & span.item-service {
                         font: var(--paragraph-sm);
                         color: var(--content-secondary);
+                    }
+
+                    & a.item-remove {
+                        cursor: pointer;
                     }
                 }
             }
@@ -185,11 +189,19 @@ main {
                             flex: 1;
                             grid-area: client;
                             font: var(--paragraph-sm);
+
+                            & span#span-pet-name {
+                                font: var(--label-lg);
+                                color: var(--content-primary);
+                            }
+                            & span#tutor-name {
+                                font: var(--paragraph-md);
+                            }
                         }
 
                         & span.item-service {
                             grid-area: service;
-                            font: var(--paragraph-sm);
+                            font: var(--paragraph-md);
                         }
 
                         & a.item-remove {

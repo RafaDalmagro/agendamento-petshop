@@ -1,31 +1,3 @@
 {
-  "schedules": [
-    {
-      "id": "1753466131697",
-      "clientName": "Rqwewq",
-      "clientPhone": "21321321321",
-      "scheduleDate": "2025-07-26",
-      "scheduleTime": "07:12",
-      "petName": "Wqeqweqweqw",
-      "serviceDescription": "qweqw"
-    },
-    {
-      "id": "1753527443264",
-      "clientName": "Qwrqweqweqw",
-      "clientPhone": "12312321312",
-      "scheduleDate": "2025-07-28",
-      "scheduleTime": "10:49",
-      "petName": "Qwqweqw",
-      "serviceDescription": "qwrwq"
-    },
-    {
-      "id": "1753527580503",
-      "clientName": "Rafael Lima Dalmagro",
-      "clientPhone": "44123213123",
-      "scheduleDate": "2025-07-26",
-      "scheduleTime": "11:58",
-      "petName": "Tigrao",
-      "serviceDescription": "Controle de doenças"
-    }
-  ]
+    "schedules": []
 }

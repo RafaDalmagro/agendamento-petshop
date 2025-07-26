@@ -11,7 +11,6 @@ import "./styles/main.css";
 
 // JS
 
-import "./modules/schedules/isBeforeSchedule.js";
 import "./modules/schedules/cancel.js";
 import "./modules/form/date-change.js";
 import "./modules/page-load.js";
