@@ -41,44 +41,7 @@
                             <h2>Manhã</h2>
                             <span class="period-time">09h-12h</span>
                         </header>
-                        <ul class="period-list">
-                            <li class="period-item">
-                                <span class="item-time" id="item-time">08:30</span>
-                                <span class="item-client" id="client-pet-name"
-                                    >
-                                    <span id="span-pet-name">Rex</span> / <span id="tutor-name">João da Silva</span></span
-                                >
-                                <span class="item-service" id="service"
-                                    >Banho e Tosa</span
-                                >
-                                <a href="#" class="item-remove" id="remove"
-                                    >Remover agendamento</a
-                                >
-                            </li>
-                            <li class="period-item">
-                                <span class="item-time" id="item-time">08:30</span>
-                                <span class="item-client" id="client-pet-name"
-                                    >João da Silva</span
-                                >
-                                <span class="item-service" id="service"
-                                    >Banho e Tosa</span
-                                >
-                                <a href="#" class="item-remove" id="remove"
-                                    >Remover agendamento</a
-                                >
-                            </li>
-                            <li class="period-item">
-                                <span class="item-time" id="item-time">08:30</span>
-                                <span class="item-client" id="client-pet-name"
-                                    >João da Silva</span
-                                >
-                                <span class="item-service" id="service"
-                                    >Banho e Tosa</span
-                                >
-                                <a href="#" class="item-remove" id="remove"
-                                    >Remover agendamento</a
-                                >
-                            </li>
+                        <ul class="period-list" id="list-morning">
                         </ul>
                     </section>
                     <section class="period" id="period-afternoon">
@@ -89,19 +52,7 @@
                             <h2>Tarde</h2>
                             <span class="period-time">13h-18h</span>
                         </header>
-                        <ul class="period-list">
-                            <li class="period-item">
-                                <span class="item-time" id="item-time">13:00</span>
-                                <span class="item-client" id="client-pet-name"
-                                    >João da Silva</span
-                                >
-                                <span class="item-service" id="service"
-                                    >Banho e Tosa</span
-                                >
-                                <a href="#" class="item-remove" id="remove"
-                                    >Remover agendamento</a
-                                >
-                            </li>
+                        <ul class="period-list" id="list-afternoon">
                         </ul>
                     </section>
                     <section class="period" id="period-night">
@@ -112,25 +63,13 @@
                             <h2>Noite</h2>
                             <span class="period-time">19h-21h</span>
                         </header>
-                        <ul class="period-list">
-                            <li class="period-item">
-                                <span class="item-time" id="item-time">20:00</span>
-                                <span class="item-client" id="client-pet-name"
-                                    >João da Silva</span
-                                >
-                                <span class="item-service" id="service"
-                                    >Banho e Tosa</span
-                                >
-                                <a href="#" class="item-remove" id="remove"
-                                    >Remover agendamento</a
-                                >
-                            </li>
+                        <ul class="period-list" id="list-night">
                         </ul>
                     </section>
                 </div>
                 <button id="new-schedule">Novo agendamento</button>
             </main>
-            <form class="">
+            <form class="hide">
                 <header>
                     <span class="icon-close" id="close-form"></span>
                     <h2>Agende um atendimento</h2>
@@ -175,7 +114,7 @@
                             <label for="time">Horário</label>
                             <div class="input-content">
                                 <img src="./src/assets/clock.svg" alt="Ícone de relógio">
-                                <input type="time" id="time" name="time" required step="3600"/>
+                                <input type="time" id="time" name="time" required/>
                                 <span class="icon-arrow"></span>
                             </div>
                         </div>

@@ -14,7 +14,7 @@ personalDate.min = todayDate;
 
 personalDate.onchange = () => {
     console.log("Data alterada para:", personalDate.value);
-    
+
     schedulesDay();
 };
 

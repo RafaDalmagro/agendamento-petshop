@@ -20,7 +20,7 @@ export function showSchedules({ schedulesDay }) {
 
             scheduleItem.classList.add("period-item");
             scheduleItem.setAttribute("data-id", schedule.id);
-            
+
             itemTime.classList.add("item-time");
             itemTime.setAttribute("id", "item-time");
 
@@ -44,7 +44,7 @@ export function showSchedules({ schedulesDay }) {
             itemTime.textContent = schedule.scheduleTime;
             tutorName.textContent = schedule.clientName;
             itemService.textContent = schedule.serviceDescription;
-            
+
             removeButton.textContent = "Remover agendamento";
 
             // Adiciona os elementos ao item de agendamento
